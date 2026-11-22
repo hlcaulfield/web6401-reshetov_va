@@ -30,11 +30,6 @@ form.addEventListener('submit', function (event) {
         return;
     }
 
-    if (!agreement) {
-        showError('Подтвердите согласие на обработку персональных данных.', 'request-agreement');
-        return;
-    }
-
     const request = new ConsultationRequest(name, email, agreement);
     request.print();
 
